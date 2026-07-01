@@ -12,15 +12,15 @@ def predict():
     if not data:
         return jsonify({"error": "Invalid JSON"})
 
-    # Get symptoms from JSON
-    symptoms = data.get("symptoms")
+    # Get disease from JSON
+    disease = data.get("disease")
 
-    # Check if symptoms are provided
-    if not symptoms:
-        return jsonify({"error": "Please enter symptoms"}), 400
+    # Check if disease are provided
+    if not disease:
+        return jsonify({"error": "Please enter disease"})
 
-    # Send symptoms to AI
-    response = get_ai_response(symptoms)
+    # Send disease to AI
+    response = get_ai_response(disease)
 
     # Convert AI JSON string into Python dictionary
     response = json.loads(response)
