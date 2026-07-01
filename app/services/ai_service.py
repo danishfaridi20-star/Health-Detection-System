@@ -9,10 +9,10 @@ client = OpenAI(
     base_url="https://openrouter.ai/api/v1"
 )
 
-def get_ai_response(symptoms):
+def get_ai_response(disease):
 
     prompt = f"""
-You are a friendly AI Health Assistant.
+You are a friendly medical assistant.
 
 Patient symptoms:
 {symptoms}
